@@ -1,0 +1,36 @@
+mutation RegisterUser($input: UserInput!) {
+  auth {
+    register(input: $input) {
+      ...RegisterSuccess
+    }
+  }
+}
+
+query Login($input: LoginInput!) {
+  auth {
+    login(input: $input) {
+      ...LoginSuccess
+    }
+  }
+}
+
+mutation RenewAccessToken($input: RenewTokenInput!) {
+  auth {
+    renewToken(input: $input) {
+      ...RenewTokenSuccess
+    }
+  }
+}
+
+fragment RegisterSuccess on RegisterSuccess {
+  userId
+}
+
+fragment LoginSuccess on LoginSuccess {
+  accessToken
+  refreshToken
+}
+
+fragment RenewTokenSuccess on RenewTokenSuccess {
+  newAccessToken
+}

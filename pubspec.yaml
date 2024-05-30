@@ -1,0 +1,31 @@
+name: auth_app
+description: "Flutter & GraphQL with Authentication Tutorial."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.1 <4.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.6
+  jwt_decode: ^0.3.1
+  provider: ^6.1.1
+  graphql_flutter: ^5.2.0-beta.6
+  get_it: ^7.6.7
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^9.0.0
+
+dev_dependencies:
+  build_runner: ^2.4.8
+  flutter_gen: ^5.4.0
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+  graphql_codegen: ^0.14.0
+
+flutter:
+  generate: true
+  uses-material-design: true
